@@ -1,0 +1,29 @@
+{
+  "name": "clipgen",
+  "version": "1.0.0",
+  "description": "Local-first video clipper: upload or import a video, auto-detect highlight clips with FFmpeg, export for TikTok/Reels/Shorts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/index.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "install:all": "npm install && npm --prefix client install",
+    "start": "NODE_ENV=production node server/index.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1"
+  },
+  "author": "Muhamad Septian Pamungkas",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
